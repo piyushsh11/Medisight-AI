@@ -1,0 +1,14 @@
+[
+  {
+    "case_uid": "MS-SAMPLE-0001",
+    "image_type": "Chest X-ray",
+    "symptoms_text": "Fever for 3 days, cough, breathlessness",
+    "urgency": "urgent"
+  },
+  {
+    "case_uid": "MS-SAMPLE-0002",
+    "image_type": "Skin Disease Image",
+    "symptoms_text": "Itching and rash over forearm for 1 week",
+    "urgency": "moderate"
+  }
+]

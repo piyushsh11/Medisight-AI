@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case History | MediSight AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="result-page">
+  <nav class="navbar navbar-expand-lg sticky-top result-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MediSight AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="upload.html" href="upload.html">Start Analysis</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="history.html" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="contact.html" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container page-header">
+    <h2 class="section-title">Previous Case History</h2>
+  </div>
+
+  <div class="container pb-4">
+    <div class="panel-card p-4">
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Patient Case ID</th>
+              <th>Image Type</th>
+              <th>Urgency Level</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody">
+            <tr>
+              <td>17 Apr 2026</td>
+              <td>MS-2026-0417-001</td>
+              <td>Chest X-ray</td>
+              <td><span class="result-pill pill-high">High</span></td>
+              <td><a class="btn btn-sm btn-outline-medical" href="result.html">View Report</a></td>
+            </tr>
+            <tr>
+              <td>15 Apr 2026</td>
+              <td>MS-2026-0415-023</td>
+              <td>Skin Disease Image</td>
+              <td><span class="result-pill pill-moderate">Moderate</span></td>
+              <td><a class="btn btn-sm btn-outline-medical" href="result.html">View Report</a></td>
+            </tr>
+            <tr>
+              <td>11 Apr 2026</td>
+              <td>MS-2026-0411-119</td>
+              <td>Other</td>
+              <td><span class="result-pill pill-low">Low</span></td>
+              <td><a class="btn btn-sm btn-outline-medical" href="result.html">View Report</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

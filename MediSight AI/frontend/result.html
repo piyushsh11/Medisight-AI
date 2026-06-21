@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Result | MediSight AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="result-page">
+  <nav class="navbar navbar-expand-lg sticky-top result-nav">
+    <div class="container-xl px-0">
+      <a class="navbar-brand" href="index.html">MediSight AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-4">
+          <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="upload.html" href="upload.html">Start Analysis</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="history.html" href="history.html">History</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="contact.html" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="result-shell">
+    <div class="progress-steps result-steps">
+      <span class="progress-chip">1.<br><small>Upload</small></span>
+      <span class="progress-chip">2. Vitals</span>
+      <span class="progress-chip">3. Symptoms</span>
+      <span class="progress-chip active">4. Result</span>
+    </div>
+
+    <h1 class="result-title">AI Case Summary</h1>
+
+    <section class="urgent-banner" id="urgentBanner">
+      <span class="urgent-dot"></span>
+      <div>
+        <strong id="urgentHeadline">Clinician review required</strong>
+        <p id="urgentDetail">Review generated findings with a licensed clinician.</p>
+      </div>
+    </section>
+
+    <section class="result-grid">
+      <article class="dark-card">
+        <h2>Top Possible Conditions</h2>
+        <div class="meta-row">
+          <span>Modality <strong id="detectedModality">-</strong></span>
+          <span>Likelihood <strong id="likelihoodBand">-</strong></span>
+        </div>
+        <p class="subtle mb-3">Scoring layer <span id="modelStatus">-</span></p>
+        <div id="conditionsContainer" class="condition-list"></div>
+      </article>
+
+      <article class="dark-card">
+        <h2>Vitals Assessment</h2>
+        <div class="vitals-grid">
+          <div class="metric-tile">
+            <strong id="primaryVitalValue">-</strong>
+            <span id="primaryVitalLabel">Most relevant vital</span>
+          </div>
+          <div class="metric-tile">
+            <strong class="risk-number" id="riskPercent">0</strong>
+            <span>Overall risk score</span>
+          </div>
+        </div>
+        <div id="vitalsAssessmentList" class="visually-hidden"></div>
+        <h3>Risk Factors</h3>
+        <div id="riskFactorsList" class="tag-list"></div>
+        <h3 class="mt-4">Abnormal Vitals</h3>
+        <ul id="abnormalVitalsList" class="compact-list"></ul>
+      </article>
+    </section>
+
+    <section class="dark-card gemini-card">
+      <div class="model-badge"><span></span><strong id="geminiStatus">Gemini · fallback</strong></div>
+      <p id="recommendationText" class="summary-text"></p>
+      <p id="explanationText" class="subtle"></p>
+
+      <div class="reasoning-section">
+        <h3>Why this was suggested</h3>
+        <ul id="geminiWhyList" class="dash-list"></ul>
+      </div>
+
+      <div class="reasoning-section">
+        <h3>Recommendations</h3>
+        <ul id="geminiRecommendationsList" class="dash-list"></ul>
+      </div>
+
+      <div class="reasoning-section">
+        <h3>Follow-up questions</h3>
+        <ul id="geminiQuestionsList" class="dash-list"></ul>
+      </div>
+    </section>
+
+    <section class="disclaimer-strip">
+      <p><strong>Medical disclaimer</strong> - <span id="disclaimerText">This is a prototype clinical decision support summary. It does not provide a confirmed diagnosis, prescribe medication, or replace clinician judgment.</span></p>
+      <ul id="geminiLimitationsList" class="d-none"></ul>
+      <ul id="evidenceList" class="d-none"></ul>
+      <ul id="symptomsExtractedList" class="d-none"></ul>
+      <ul id="emergencyFlagsList" class="d-none"></ul>
+    </section>
+
+    <div class="result-actions">
+      <a href="history.html" class="btn btn-outline-medical">View case history</a>
+      <a href="upload.html" class="btn btn-medical">Start new analysis</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
